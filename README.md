@@ -2,7 +2,7 @@
 
 AmazonBooks: **amazonbooks_x0** (without side features)
 
-| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HitRate@20     | HitRate@50     | Steps-to-Reproduce     |
+| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HR@20     | HR@50     | Steps-to-Reproduce     |
 |----------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:----------------------:|
 | MostPopular           |               |               |             |             |                |                |                        |
 | ItemKNN               |               |               |             |             |                |                |                        |
