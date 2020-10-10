@@ -1,8 +1,70 @@
 # CF-benchmarks
 
-+ Matrix factorization based models
-+ Autoencoder based models
-+ Metric learning based models
-+ GNN-based models
+AmazonBooks: **amazonbooks_x0** (without side features)
+
+| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HitRate@20     | HitRate@50     | Steps-to-Reproduce     |
+|----------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:----------------------:|
+| MostPopular           |               |               |             |             |                |                |                        |
+| ItemKNN               |               |               |             |             |                |                |                        |
+| MF-BPR                |               |               |             |             |                |                | notebook               |
+| MF-CEL                |               |               |             |             |                |                |                        |
+| SLIM                  |               |               |             |             |                |                |                        |
+| AutoRec               |               |               |             |             |                |                |                        |
+| MVAE                  |               |               |             |             |                |                |                        |
+| CML                   |               |               |             |             |                |                |                        |
+|                       |               |               |             |             |                |                |                        |
+| **Interaction-based** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** | **Steps-to-Reproduce** |
+| NeuMF                 |               |               |             |             |                |                |                        |
+
+
+Yelp2018: **yelp18_x0** (without side features)
+
+| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HitRate@20     | HitRate@50     | Steps-to-Reproduce     |
+|----------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:----------------------:|
+| MostPopular           |               |               |             |             |                |                |                        |
+| ItemKNN               |               |               |             |             |                |                |                        |
+| MF-BPR                |               |               |             |             |                |                | notebook               |
+| MF-CEL                |               |               |             |             |                |                |                        |
+| SLIM                  |               |               |             |             |                |                |                        |
+| AutoRec               |               |               |             |             |                |                |                        |
+| MVAE                  |               |               |             |             |                |                |                        |
+| CML                   |               |               |             |             |                |                |                        |
+|                       |               |               |             |             |                |                |                        |
+| **Interaction-based** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** | **Steps-to-Reproduce** |
+| NeuMF                 |               |               |             |             |                |                |                        |
+
+
+Gowalla: **gowalla_x0** (without side features)
+
+| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HitRate@20     | HitRate@50     | Steps-to-Reproduce     |
+|----------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:----------------------:|
+| MostPopular           |               |               |             |             |                |                |                        |
+| ItemKNN               |               |               |             |             |                |                |                        |
+| MF-BPR                |               |               |             |             |                |                | notebook               |
+| MF-CEL                |               |               |             |             |                |                |                        |
+| SLIM                  |               |               |             |             |                |                |                        |
+| AutoRec               |               |               |             |             |                |                |                        |
+| MVAE                  |               |               |             |             |                |                |                        |
+| CML                   |               |               |             |             |                |                |                        |
+|                       |               |               |             |             |                |                |                        |
+| **Interaction-based** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** | **Steps-to-Reproduce** |
+| NeuMF                 |               |               |             |             |                |                |                        |
+
+
+MovieLens-1M: **movielens_1m_x0** (without side features)
+
+| Representation-based  | Recall@20     | Recall@50     | NDCG@20     | NDCG@50     | HitRate@20     | HitRate@50     | Steps-to-Reproduce     |
+|----------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:----------------------:|
+| MostPopular           |               |               |             |             |                |                |                        |
+| ItemKNN               |               |               |             |             |                |                |                        |
+| MF-BPR                |               |               |             |             |                |                | notebook               |
+| MF-CEL                |               |               |             |             |                |                |                        |
+| SLIM                  |               |               |             |             |                |                |                        |
+| AutoRec               |               |               |             |             |                |                |                        |
+| MVAE                  |               |               |             |             |                |                |                        |
+| CML                   |               |               |             |             |                |                |                        |
+|                       |               |               |             |             |                |                |                        |
+| **Interaction-based** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** | **Steps-to-Reproduce** |
+| NeuMF                 |               |               |             |             |                |                |                        |
 
 
