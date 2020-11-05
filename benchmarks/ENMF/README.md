@@ -4,7 +4,10 @@ ENMF is a model for Efficient Neural Matrix Factorization, published in the foll
 > Chong Chen, Min Zhang, Yongfeng Zhang, Yiqun Liu, and Shaoping Ma. Efficient Neural Matrix Factorization without Sampling for Recommendation. In TOIS, vol. 38, no. 2, 2020.
 
 
-The benchmark is implemented based on the original ENMF code released by the authors at [Github](https://github.com/chenchongthu/ENMF/tree/153e75878eb058b9c3e7fd74c84355fbda6b7a23) (commit hash: 153e758). But the following modifications are made. You can view these changes via a diff comparison through this [link](https://github.com/xue-pai/Open-CF-Benchmarks/compare/ada620b...939f87e?diff=split).
+The benchmark is implemented based on the original ENMF code released by the authors on Github:
+https://github.com/chenchongthu/ENMF/tree/153e75878eb058b9c3e7fd74c84355fbda6b7a23 (commit hash: 153e758). 
+
+In addition, the following modifications are made. You can view these changes via a diff comparison through this [link](https://github.com/xue-pai/Open-CF-Benchmarks/compare/ada620b...939f87e?diff=split).
 
 
 1. Tensorflow APIs updates, for example:
