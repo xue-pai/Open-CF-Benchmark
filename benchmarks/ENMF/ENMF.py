@@ -1,6 +1,8 @@
-# Modified based on the original source code
+#==============================================================
+# Copied and modified based on the original source code:
+# https://github.com/chenchongthu/ENMF
 # Licenced to https://github.com/chenchongthu/ENMF/blob/master/LICENSE
-#================================================
+#==============================================================
 
 import numpy as np
 import tensorflow as tf

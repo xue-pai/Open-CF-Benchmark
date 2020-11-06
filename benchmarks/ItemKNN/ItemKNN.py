@@ -1,7 +1,7 @@
 #======================================================================
 # ItemKNN model for implicit CF, modified based on the following papers:
-# [WWW'2001] Item-Based Collaborative Filtering Recommendation Algorithms
-# [SIGIR'2007] Effective Missing Data Prediction for Collaborative Filtering
+# + [WWW'2001] Item-Based Collaborative Filtering Recommendation Algorithms
+# + [SIGIR'2007] Effective Missing Data Prediction for Collaborative Filtering
 # Authors: Jinpeng Wang <Tsinghua University>
 #          Kelong Mao <Tsinghua University>
 # Edited by XUEPAI Team

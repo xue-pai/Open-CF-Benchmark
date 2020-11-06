@@ -22,9 +22,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |  Representation-based-Model |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |               |               |             |             |                |                |                    |                |
-|                     ItemKNN |    0.0736           |  0.1175             |    0.0606         |   0.0771          |     0.3765           |     0.5234           |    [notebook](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_amazonbooks_x0.ipynb)               |    Jinpeng Wang            |
-|                      MF-BPR |               |               |             |             |                |                |      notebook      |                |
-|                      MF-CEL |               |               |             |             |                |                |                    |                |
+|                     [WWW'2001] ItemKNN |    0.0736           |  0.1175             |    0.0606         |   0.0771          |     0.3765           |     0.5234           |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_amazonbooks_x0.md)               |    Jinpeng Wang            |
+|                      [UAI'2009] MF-BPR |               |               |             |             |                |                |      link      |                |
 |                        SLIM |               |               |             |             |                |                |                    |                |
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
@@ -48,9 +47,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |  Representation-based-Model |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |               |               |             |             |                |                |                    |                |
-|                     ItemKNN |   0.0639            |   0.1219            |    0.0531         |     0.0746        |      0.3876          |    0.5753            |     [notebook](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_yelp18_x0.ipynb)               |      Jinpeng Wang          |
-|                      MF-BPR |               |               |             |             |                |                |      notebook      |                |
-|                      MF-CEL |               |               |             |             |                |                |                    |                |
+|                     [WWW'2001] ItemKNN |   0.0639            |   0.1219            |    0.0531         |     0.0746        |      0.3876          |    0.5753            |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_yelp18_x0.md)               |      Jinpeng Wang          |
+|                     [UAI'2009] MF-BPR |               |               |             |             |                |                |      link      |                |
 |                        SLIM |               |               |             |             |                |                |                    |                |
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
@@ -74,9 +72,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |  Representation-based-Model |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |               |               |             |             |                |                |                    |                |
-|                     ItemKNN |   0.1570           |   0.2549            |    0.1214         |     0.1527       |      0.5094         |    0.6650            |     [notebook](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_gowalla_x0.ipynb)               |      Jinpeng Wang          |
-|                      MF-BPR |               |               |             |             |                |                |      notebook      |                |
-|                      MF-CEL |               |               |             |             |                |                |                    |                |
+|                     [WWW'2001] ItemKNN |   0.1570           |   0.2549            |    0.1214         |     0.1527       |      0.5094         |    0.6650            |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_gowalla_x0.md)               |      Jinpeng Wang          |
+|                      [UAI'2009] MF-BPR |               |               |             |             |                |                |      link      |                |
 |                        SLIM |               |               |             |             |                |                |                    |                |
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
