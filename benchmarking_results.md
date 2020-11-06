@@ -28,6 +28,7 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
 |                         CML |               |               |             |             |                |                |                    |                |
+|                         [TOIS'2020] ENMF |    0.0359           |   0.0691           |  0.0281           |      0.0404       |      0.2187          |    0.3649            |   [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ENMF/ENMF_amazonbooks_x0.md)               |    Jinpeng Wang            |
 |                             |               |               |             |             |                |                |                    |                |
 | **Interaction-based-Model** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** |                    |                |
 |                       NeuMF |               |               |             |             |                |                |                    |                |
@@ -53,6 +54,7 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
 |                         CML |               |               |             |             |                |                |                    |                |
+|                         [TOIS'2020] ENMF |    0.0359           |   0.0691           |  0.0281           |      0.0404       |      0.2187          |    0.3649            |   [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ENMF/ENMF_amazonbooks_x0.md)               |    Jinpeng Wang            |
 |                             |               |               |             |             |                |                |                    |                |
 | **Interaction-based-Model** | **Recall@20** | **Recall@50** | **NDCG@20** | **NDCG@50** | **HitRate@20** | **HitRate@50** |                    |                |
 |                       NeuMF |               |               |             |             |                |                |                    |                |
