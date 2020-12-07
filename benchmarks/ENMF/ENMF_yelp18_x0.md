@@ -15,7 +15,7 @@ Edited by [XUEPAI Team](https://github.com/xue-pai)
 
     ```python
     CPU: Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.6GHz
-    RAM: 755G
+    RAM: 500G+
     GPU: Tesla P100, 16G memory
     ```
 + Software
