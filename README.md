@@ -1,21 +1,4 @@
-# Open-CF-benchmarks
-
-
-### Datasets
-In our benchmarks, we employ the following open datasets that are commonly used in existing work.
-
-| Dataset           | Dataset_ID           | Contain features? | Description                                                           |
-|-------------------|----------------------|:-----------------:|-----------------------------------------------------------------------|
-| AmazonBooks       | amazonbooks_x0       |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
-| Yelp18            | yelp18_x0            |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
-| Gowalla           | gowalla_x0           |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
-| Movielens1M       | movielens1m_x0       |         NO        | Following the data splitting and preprocessing in LCFN.               |
-|                   | movielens1m_x1       |         NO        | Following the data splitting and preprocessing in NCF.                |
-| Movielens10M      |                      |                   | TODO                                                                  |
-| CiteULike-A       | citeulikea_x0        |         NO        | Following the data splitting and preprocessing in DHCF.               |
-| AmazonElectronics | amazonelectronics_x0 |         NO        | Following the data splitting and preprocessing in NBPO.               |
-| Frappe            |                      |        YES        | TODO                                                                  |
-| Taobao            |                      |        YES        | TODO                                                                  |
+# Open-CF-Benchmarks
 
 
 ### Models
@@ -36,6 +19,30 @@ In our benchmarks, we have evaluated the following models with open-source code 
 | 2020 |  LightGCN  |      YES      | [SIGIR'20] LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation |
 | 2020 |    ENMF    |      YES      | [TOIS'20] Efficient Neural Matrix Factorization without Sampling for Recommendation        |
 | 2020 |   MF-CEL   |      YES      |                                                                                            |
+
+
+### Datasets
+In our benchmarks, we employ the following open datasets that are commonly used in existing work.
+
+| Dataset           | Dataset_ID           | Contain features? | Description                                                           |
+|-------------------|----------------------|:-----------------:|-----------------------------------------------------------------------|
+| AmazonBooks       | amazonbooks_x0       |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
+| Yelp18            | yelp18_x0            |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
+| Gowalla           | gowalla_x0           |         NO        | Following the data splitting and preprocessing in NGCF and LightGCN.  |
+| Movielens1M       | movielens1m_x0       |         NO        | Following the data splitting and preprocessing in LCFN.               |
+|                   | movielens1m_x1       |         NO        | Following the data splitting and preprocessing in NCF.                |
+| Movielens10M      |                      |                   | TODO                                                                  |
+| CiteULike-A       | citeulikea_x0        |         NO        | Following the data splitting and preprocessing in DHCF.               |
+| AmazonElectronics | amazonelectronics_x0 |         NO        | Following the data splitting and preprocessing in NBPO.               |
+| Frappe            |                      |        YES        | TODO                                                                  |
+| Taobao            |                      |        YES        | TODO   
+
+
+### Results
+
+:point_right: Check [the benchmarking results](./benchmarking_results.md).
+
+
 
 
 
