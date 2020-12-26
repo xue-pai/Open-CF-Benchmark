@@ -1,5 +1,7 @@
 # Open-CF-Benchmarks
 
+:point_right: Check [our benchmarking results](./benchmarks/results.md)
+
 
 ### Models
 In our benchmarks, we have evaluated the following models with open-source code and reproducible steps.
@@ -36,11 +38,6 @@ In our benchmarks, we employ the following open datasets that are commonly used 
 | AmazonElectronics | amazonelectronics_x0 |         NO        | Following the data splitting and preprocessing in NBPO.               |
 | Frappe            |                      |        YES        | TODO                                                                  |
 | Taobao            |                      |        YES        | TODO   
-
-
-### Results
-
-:point_right: Check [the benchmarking results](./benchmarking_results.md).
 
 
 
