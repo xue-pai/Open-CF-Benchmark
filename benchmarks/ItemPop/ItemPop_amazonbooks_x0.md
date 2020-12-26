@@ -34,13 +34,13 @@ We follow the data split and preprocessing steps in NGCF and LightGCN. We direct
 1. This benchmark is implemented based on a public repository for recommendation, daisyRec: https://github.com/AmazingDD/daisyRec/tree/bd896f9a8179005a41f63a58243b1db99992d235. We use the version with commit hash: bd896f9.
 
 2. We add ``RecallPrecision_ATk``, ``MRRatK_r``, ``NDCGatK_r``, ``HRK_r`` in ``daisy/utils/metrics.py`` for our benchmarking.
-Three functions are copied from the code of [LightGCN-PyTorch](https://github.com/gusye1234/LightGCN-PyTorch/blob/b06c6b9db8391de4fbcf45ad436536743a6c896d/code/utils.py). You can view these changes via a diff comparison through this link: https://github.com/xue-pai/Open-CF-Benchmarks/compare/c980943...7b12c48?diff=split
+Three functions are copied from the code of [LightGCN-PyTorch](https://github.com/gusye1234/LightGCN-PyTorch/blob/b06c6b9db8391de4fbcf45ad436536743a6c896d/code/utils.py). You can view these changes via a diff comparison through this link: https://github.com/xue-pai/Open-CF-Benchmarks/compare/943043...28c87c?diff=split
 
 3. Run the following script to reproduce the result.
 
-```bash
-python itempop.py --dataset=AmazonBooks --topk=[20,50]
-```
+    ```bash
+    python ItemPop.py --dataset=AmazonBooks --topk=[20,50]
+    ```
 
 ### Results
 

@@ -21,7 +21,7 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 
 |  Representation-based-Model |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
-|                 ItemPop     |     0.0051          |   0.0101            |    0.0044         |  0.0061           |     0.0419           |    0.0764            |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_amazonbooks_x0.md)                |                |
+|                 ItemPop     |     0.0051          |   0.0101            |    0.0044         |  0.0061           |     0.0419           |    0.0764            |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_amazonbooks_x0.md)                |       Kelong Mao         |
 |                     ItemKNN |    0.0736           |  0.1175             |    0.0606         |   0.0771          |     0.3765           |     0.5234           |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_amazonbooks_x0.md)               |    Jinpeng Wang            |
 |                      MF-BPR |               |               |             |             |                |                |      link      |                |
 |                        SLIM [ICDM'20XX] |               |               |             |             |                |                |                    |                |
