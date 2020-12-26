@@ -85,7 +85,7 @@ class Compute_Similarity:
 
 
 class ItemKNNCF(object):
-    def __init__(self, user_num, item_num, maxk=40, shrink=100, 
+    def __init__(self, user_num, item_num, maxk=10, shrink=100, 
                  similarity='cosine', normalize=True):
         """
         ItemKNN recommender

@@ -13,13 +13,14 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from sklearn.linear_model import ElasticNet
+from IPython import embed
 
 # TODO this recommender must change to multiprocessing mode and compress into a more beautiful way
 
 
 class SLIM(object):
     def __init__(self, user_num, item_num, topk=100,
-                 l1_ratio=0.1, alpha=1.0, positive_only=True):
+                 l1_ratio=0.0005, alpha=1.0, positive_only=True):
         """
         SLIM Recommender Class
         Parameters
@@ -111,7 +112,7 @@ class SLIM(object):
                 sys.stderr.flush()
 
                 start_time_printBatch = time.time()
-
+                
         # generate the sparse weight matrix
         self.w_sparse = sp.csr_matrix((values[:numCells], (rows[:numCells], cols[:numCells])),
                                       shape=(self.item_num, self.item_num), dtype=np.float32)
@@ -125,6 +126,7 @@ class SLIM(object):
 
     def _convert_df(self, user_num, item_num, df):
         """Process Data to make WRMF available"""
+
         ratings = list(df['rating'])
         rows = list(df['user'])
         cols = list(df['item'])
