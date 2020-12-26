@@ -46,8 +46,6 @@ class VAE(nn.Module):
         self.early_stop = early_stop
 
         os.environ['CUDA_VISIBLE_DEVICES'] = gpuid
-        # torch.cuda.set_device(int(gpuid)) # if internal error, try this code instead
-
         cudnn.benchmark = True
 
         user_num, item_num = rating_mat.shape
@@ -117,7 +115,7 @@ class VAE(nn.Module):
         if self.training:
             std = torch.exp(0.5 * logvar)
             eps = torch.randn_like(std)
-            return eps.mul(std).add_(mu)  # core calculation for predicting the real distribution
+            return eps.mul(std).add_(mu)
         else:
             return mu
 
@@ -132,8 +130,7 @@ class VAE(nn.Module):
     def forward(self, input):
         mu, logvar = self.encode(input)
         z = self.reparameterize(mu, logvar)
-        z = self.decode(z)
-        return z, mu, logvar
+        return self.decode(z), mu, logvar
 
     def fit(self, train_loader):
         if torch.cuda.is_available():
@@ -168,6 +165,7 @@ class VAE(nn.Module):
                 self.zero_grad()
                 ur = ur.float()
                 mask_ur = mask_ur.float()
+
                 pred, mu, logvar = self.forward(mask_ur)
                 # BCE
                 # BCE = -torch.mean(torch.sum(F.log_softmax(pred, 1) * ur, -1))
@@ -198,27 +196,9 @@ class VAE(nn.Module):
                 last_loss = current_loss
 
         x_items = torch.tensor(self.rating_mat).float()
-        if torch.cuda.is_available():
-            x_items = x_items.cuda()
-        else:
-            x_items = x_items.cpu()
-
-        # consider there is no enough GPU memory to calculate, we must turn to other methods
         self.prediction = self.forward(x_items)[0]
         self.prediction.clamp_(min=0, max=5)
-        self.prediction = self.prediction.cpu().detach().numpy()
-
-        # get row number
-        #row_tmp = x_items.size()[0]
-        #for idx in range(row_tmp):
-        #    tmp = x_items[idx, :].unsqueeze(dim=0)
-        #    tmp_pred = self.forward(tmp)[0]
-        #    tmp_pred.clamp_(min=0, max=5)
-        #    tmp_pred = tmp_pred.cpu().detach().numpy()
-        #    if idx == 0:
-        #        self.prediction = tmp_pred
-        #    else:
-        #        self.prediction = np.vstack((self.prediction, tmp_pred))
+        self.prediction = self.prediction.detach().numpy()
 
     def predict(self, u, i):
         return self.prediction[u, i]

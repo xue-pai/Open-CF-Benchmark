@@ -67,7 +67,7 @@ class CDAE(nn.Module):
         if out_activation == 'sigmoid':
             self.o_act = nn.Sigmoid()
         elif out_activation == 'relu':
-            self.o_act = nn.ReLU()
+            self.o_act = nn.Sigmoid()
         else:
             raise ValueError('Invalid output layer activation function')
 
