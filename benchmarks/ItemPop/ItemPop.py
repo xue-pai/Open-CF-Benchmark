@@ -6,7 +6,7 @@ import argparse
 import numpy as np
 import pandas as pd
 from os.path import join
-from daisy.utils.metrics import MaxTopK,RecallPrecision_ATk,MRRatK_r,NDCGatK_r, HRK_r
+from daisy.utils.metrics import RecallPrecision_ATk,MRRatK_r,NDCGatK_r, HRK_r
 from daisy.model.PopRecommender import MostPop
 
 
