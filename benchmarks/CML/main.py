@@ -1,17 +1,20 @@
+import sys
+sys.path.append("../../external/CollMetric/")
 import numpy as np
 import tensorflow as tf
 import os
 from datetime import datetime
 from sampler import WarpSampler
 from CML_utils import Evaluator, Monitor, parse_args, dataset_to_uimatrix
+from CML import CML, optimize
 
 
 if __name__ == '__main__':
     args = parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-    np.random.seed(2017)
     random_seed = 2017
+    np.random.seed(random_seed)
     tf.compat.v1.set_random_seed(random_seed)
     
     print("%s reading dataset %s" % (datetime.now(), args.dataset))

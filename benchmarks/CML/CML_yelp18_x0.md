@@ -1,4 +1,3 @@
-
 ## CML_yelp18_x0 
 
 A notebook to benchmark CML on yelp18_x0 dataset.
@@ -34,12 +33,12 @@ We follow the data split and preprocessing steps in NGCF and LightGCN. We direct
 
 ### Code
 
-The benchmark is implemented based on the original CML code released by the authors at https://github.com/changun/CollMetric/tree/d9026cfce7c6e8dd2640b842ad524b61031b29ac, we use the version with commit hash: d9026cf. We also made the following modifications for our benchmarking. These changes can be viewed via a diff comparison here: .
+The benchmark is implemented based on the original CML code released by the authors at https://github.com/changun/CollMetric/tree/d9026cfce7c6e8dd2640b842ad524b61031b29ac, we use the version with commit hash: d9026cf. We also made the following modifications for our benchmarking. These changes can be viewed via a diff comparison here: https://github.com/xue-pai/Open-CF-Benchmarks/compare/5415b7...1d6bd6?diff=split
 
 1. Tensorflow APIs updates, for example:
-```python
-tf.nn.dropout(x, keep_prob) => tf.nn.dropout(x, rate=1 - keep_prob)
-```
+    ```python
+    tf.nn.dropout(x, keep_prob) => tf.nn.dropout(x, rate=1 - keep_prob)
+    ```
 2. Add the class `Evaluator`, which evaluates the metircs (hitrate@k,recall@k,ndcg@k).
 3. Add the class `Monitor`, which records the metircs (hitrate@20,recall@20,ndcg@20,hitrate@50,recall@50,ndcg@50) for validation and determines whether to early stop.
 4. Add the method `dataset_to_uimatrix`, which reads and preprocess the input data as a training dataset.
@@ -67,7 +66,7 @@ topK = "20 50" # Metrics at TopK
 ```
 
 ```bash
-python CML.py --gpu 1 --dataset yelp18_x0 --train_data ../../data/Yelp18/yelp18_x0/train.txt --test_data ../../data/Yelp18/yelp18_x0/test.txt --verbose 30 --batch_size 50000 --max_step 5000 --embed_dim 100 --lr 0.001 --dropout 0.2 --margin 1.9 --clip_norm 1 --num_negative 90 --topK 20 50
+python -u main.py --gpu 1 --dataset yelp18_x0 --train_data ../../data/Yelp18/yelp18_x0/train.txt --test_data ../../data/Yelp18/yelp18_x0/test.txt --verbose 30 --batch_size 50000 --max_step 5000 --embed_dim 100 --lr 0.001 --dropout 0.2 --margin 1.9 --clip_norm 1 --num_negative 90 --topK 20 50
 ```
 
 
