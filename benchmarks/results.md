@@ -23,7 +23,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |     0.0051          |   0.0101            |    0.0044         |  0.0061           |     0.0419           |    0.0764            |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_amazonbooks_x0.md)                |       Kelong Mao         |
 |                     ItemKNN [WWW'2001] |    0.0736           |  0.1175             |    0.0606         |   0.0771          |     0.3765           |     0.5234           |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_amazonbooks_x0.md)               |    Jinpeng Wang            |
-|                      MF-BPR [UAI'2009] |               |               |             |             |                |                |      link      |                |
+|                      MF-BPR [UAI'2009] |    ~~0.0250~~           |        -       |     ~~0.0196~~        |     -        |        -        |          -      |      -     |    [Report by NGCF paper](https://arxiv.org/abs/1905.08108)               |
+|                                        |      0.0338         |     0.0660          |      0.0261       |    0.0380         |      0.2103          |       0.3530         |      link      |      XUEPAI          |
 |                        SLIM [ICDM'2011] |               |               |             |             |                |                |                    |                |
 |                     AutoRec |              |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
@@ -50,7 +51,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |     0.0124          |   0.0242            |    0.0101         |      0.0145       |        0.0831        |     0.1493           |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_yelp18_x0.md)               |      Kelong Mao          |
 |                     ItemKNN [WWW'2001]  |   0.0639            |   0.1219            |    0.0531         |     0.0746        |      0.3876          |    0.5753            |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_yelp18_x0.md)               |      Jinpeng Wang          |
-|                    MF-BPR [UAI'2009] |               |               |             |             |                |                |      link      |                |
+|                    MF-BPR [UAI'2009] |      ~~0.0433~~         |      -         |   ~~0.0354~~          |       -         |         -          |      -             |       -      |     [Report by NGCF paper](https://arxiv.org/abs/1905.08108)            |
+|                                      |    0.0576           |      0.1123         |     0.0468        |   0.0671          |      0.3624          |       0.5577         |      link      |       XUEPAI         |
 |                        SLIM [ICDM'2011] |               |               |             |             |                |                |                    |                |
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
@@ -69,7 +71,7 @@ We use this dataset following the same data splitting and preprocessing as in [N
 
 |                | #Users | #Items | #Interactions |   #Train  |  #Test  | Density |
 |:--------------:|:------:|:------:|:-------------:|:---------:|:-------:|:-------:|
-| gowalla_x0 |   |   |      |   |   |   |
+| gowalla_x0 | 29,858  | 40,981  |  1,027,370    | 810,128  | 217,242  |  0.00084  |
 
 Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for fair comparisons.
 
@@ -77,7 +79,8 @@ Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for
 |----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |                 ItemPop     |    0.0416           |    0.0624           |     0.0317        |     0.0379        |       0.2038         |      0.2777          |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_gowalla_x0.md)               |     Kelong Mao           |
 |                 ItemKNN [WWW'2001]  |   0.1570           |   0.2549            |    0.1214         |     0.1527       |      0.5094         |    0.6650            |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_gowalla_x0.md)               |      Jinpeng Wang          |
-|                  MF-BPR [UAI'2009] |               |               |             |             |                |                |      link      |                |
+|                  MF-BPR [UAI'2009] |   ~~0.1291~~         |       -        |     ~~0.1109~~        |    -           |     -             |       -           |      -        |          [Report by NGCF paper](https://arxiv.org/abs/1905.08108)   |
+|                                    |   0.1627            |    0.2533           |    0.1378         |   0.1662          |        0.5544        |    0.6936            |      link      |       XUEPAI         |
 |                        SLIM [ICDM'2011] |               |               |             |             |                |                |                    |                |
 |                     AutoRec |               |               |             |             |                |                |                    |                |
 |                        MVAE |               |               |             |             |                |                |                    |                |
