@@ -36,7 +36,7 @@ Three functions are copied from the code of [LightGCN-PyTorch](https://github.co
 
 3. Run the following script to reproduce the result.
 
-    Hyperparameters: `alpha` tuned from [0.01, 0.015, 0.005], `l1` tuned from [1e-3, 1e-4, 1e-5, 1e-6]
+    `Hyperparameters: alpha tuned from [0.01, 0.015, 0.005], l1 tuned from [1e-3, 1e-4, 1e-5, 1e-6]`
 
     ```bash
     python -u SLIM.py --dataset=Gowalla --topk=[20,50] --alpha=0.005 --l1=1e-6

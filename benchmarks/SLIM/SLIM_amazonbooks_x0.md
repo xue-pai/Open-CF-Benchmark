@@ -36,7 +36,7 @@ Three functions are copied from the code of [LightGCN-PyTorch](https://github.co
 
 3. Run the following script to reproduce the result.
 
-    Hyperparameters: `alpha` tuned from [1e-2, 2e-3, 1e-3, 5e-4, 1e-4], `l1` tuned from [1e-3, 1e-4, 1e-5, 1e-6]
+    `Hyperparameters: alpha tuned from [1e-2, 2e-3, 1e-3, 5e-4, 1e-4], l1 tuned from [1e-3, 1e-4, 1e-5, 1e-6]`
 
     ```bash
     python -u SLIM.py --dataset=AmazonBooks --topk=[20,50] --alpha=0.001 --l1=0.001
