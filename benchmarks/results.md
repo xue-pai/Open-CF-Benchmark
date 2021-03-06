@@ -91,7 +91,7 @@ We use this dataset following the same data splitting and preprocessing as in [N
 
 :pushpin: Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for fair comparisons.
 
-|  Models |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
+| Publication |  Models |   Recall@20   |   Recall@50   |   NDCG@20   |   NDCG@50   |   HitRate@20   |   HitRate@50   | Steps-to-Reproduce | Contributed-by |
 | -----------: | :----------------------------:|:-------------:|:-------------:|:-----------:|:-----------:|:--------------:|:--------------:|:------------------:|----------------|
 |  |               ItemPop     |    0.0416           |    0.0624           |     0.0317        |     0.0379        |       0.2038         |      0.2777          |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemPop/ItemPop_gowalla_x0.md)               |     Kelong Mao           |
 |    WWW'2001 |             ItemKNN  |   0.1570           |   0.2549            |    0.1214         |     0.1527       |      0.5094         |    0.6650            |     [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ItemKNN/ItemKNN_gowalla_x0.md)               |      Jinpeng Wang          |
