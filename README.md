@@ -3,9 +3,9 @@
 
 Towards Open Benchmarking for Collaborative Filtering
 
-+ [Models](#models)
-+ [Datasets](#datasets)
-+ [Benchmarking results](./benchmarks/results.md) :+1: 
+:star: [Models](#models) 
+:star: [Datasets](#datasets) 
+:star: [Benchmarking results](./benchmarks/results.md)  
 
 
 ### Models
