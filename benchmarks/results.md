@@ -50,7 +50,7 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |    AAAI'2020 |     LR-GCCF     |   0.0335   |           |   0.0265   |         |            |            |                             link                             | Yi Li                                                        |
 |   SIGIR'2020 |     NIA-GCN     |   0.0369   |     /     |   0.0287   |    /    |     /      |     /      |                              /                               | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
 |   SIGIR'2020 |    LightGCN     |   0.0411   |     /     |   0.0315   |    /    |     /      |     /      |                              /                               | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
-|              | LightGCN (ours) |   0.0411   |  0.0799   |   0.0318   | 0.0461  |   0.2423   |   0.4019   | [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/LightGCN/LightGCN_TF_amazonbooks_x0.md) | Yi Li                                                        |
+|              | LightGCN (ours) |   0.0411   |  0.0799   |   0.0318   | 0.0461  |   0.2423   |   0.4019   | [link](./LightGCN/LightGCN_TF_amazonbooks_x0.md) | Yi Li                                                        |
 |   SIGIR'2020 |      DGCF       |   0.0422   |     /     |   0.0324   |    /    |     /      |     /      |                              /                               | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
 |   Arxiv'2020 |    NGAT4Rec     |   0.0457   |     /     |   0.0358   |    /    |     /      |     /      |                              /                               | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
 |   Arxiv'2020 |     SGL-ED      |   0.0478   |     /     |   0.0379   |    /    |     /      |     /      |                              /                               | [Reported by SGL-ED paper](https://arxiv.org/pdf/2010.10783.pdf)` |
@@ -78,7 +78,7 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |    WWW'2019 |                     EASE^R |     0.0657          |    0.1225           |     0.0552        |   0.0762          |      0.3966          |    0.5839            |    [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/EASE_r/EASE_yelp18_x0.md)                |    XUEPAI            |
 |     TOIS'2020 |                 ENMF |    0.0624          |  0.1189         |  0.0515       |     0.0723      |      0.3848         |    0.5792       |   [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ENMF/ENMF_yelp18_x0.md)               |    Jinpeng Wang            |
 | SIGIR'2020 | LightGCN | 0.0649 | / | 0.0530 | / | / | / | / | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
-|  | LightGCN (ours) | 0.0653 | 0.1254 | 0.0532 | 0.0756 | 0.3974 | 0.5922 | [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/LightGCN/LightGCN_TF_yelp18_x0.md) | Yi Li |
+|  | LightGCN (ours) | 0.0653 | 0.1254 | 0.0532 | 0.0756 | 0.3974 | 0.5922 | [link](./LightGCN/LightGCN_TF_yelp18_x0.md) | Yi Li |
 
 
 
@@ -104,4 +104,4 @@ We use this dataset following the same data splitting and preprocessing as in [N
 |        WWW'2019 |            EASE^R |    0.1765           |    0.2701           |    0.1467         |     0.1760        |      0.5727          |      0.7081          |  [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/EASE_r/EASE_gowalla_x0.md)                  |     XUEPAI           |
 |        TOIS'2020 |              ENMF |    0.1523        |  0.2379        |  0.1315     |     0.1583     |     0.5336      |   0.6701    |   [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/ENMF/ENMF_gowalla_x0.md)               |    Jinpeng Wang            |
 | SIGIR'2020 | LightGCN | 0.1830 | / | 0.1550 | / | / | / | / | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
-|  | LightGCN (ours) | 01820 | 0.2821 | 0.1547 | 0.1859 | 0.5924 | 0.7295 | [link](https://github.com/xue-pai/Open-CF-Benchmarks/blob/master/benchmarks/LightGCN/LightGCN_TF_gowalla_x0.md) | Yi Li |
+|  | LightGCN (ours) | 01820 | 0.2821 | 0.1547 | 0.1859 | 0.5924 | 0.7295 | [link](./LightGCN/LightGCN_TF_gowalla_x0.md) | Yi Li |
