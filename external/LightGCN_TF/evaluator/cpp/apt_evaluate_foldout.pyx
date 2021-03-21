@@ -20,11 +20,11 @@ cdef extern from "include/evaluate_foldout.h":
 
 
 def apt_evaluate_foldout(ranking_scores, ground_truth, top_k = 20, thread_num=None):
-    metrics_num = 5
+    metrics_num = 6 
     users_num, rank_len = np.shape(ranking_scores)
     if users_num != len(ground_truth):
         raise Exception("The lengths of 'ranking_scores' and 'ground_truth' are different.")
-    thread_num = (thread_num or (os.cpu_count() or 1) * 5)
+    thread_num = (thread_num or (os.cpu_count() or 1) * 6)
 
     float_type = get_float_type()
     int_type = get_int_type()

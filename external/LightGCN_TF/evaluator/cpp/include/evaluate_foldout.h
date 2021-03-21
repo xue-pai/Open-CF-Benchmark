@@ -45,6 +45,23 @@ vector<float> recall(int *rank, int top_k, int *truth, int truth_len)
     return result;
 }
 
+vector<float> hitrate(int *rank, int top_k, int *truth, int truth_len)
+{
+    vector<float> result(top_k);
+    int hits = 0;
+    set<int> truth_set(truth, truth+truth_len);
+    for(int i=0; i<top_k; i++)
+    {
+        if(truth_set.count(rank[i]))
+        {
+            hits = 1;
+        }
+        result[i] = hits; 
+    }
+    return result;
+}
+
+
 vector<float> ap(int *rank, int top_k, int *truth, int truth_len)
 {
     vector<float> result(top_k); // = precision(rank, top_k, truth, truth_len);
@@ -121,6 +138,7 @@ void evaluate_foldout(int users_num,
     ThreadPool pool(thread_num);
     vector< future< vector<float> > > sync_pre_results;
     vector< future< vector<float> > > sync_recall_results;
+    vector< future< vector<float> > > sync_hitrate_results;
     vector< future< vector<float> > > sync_ap_results;
     vector< future< vector<float> > > sync_ndcg_results;
     vector< future< vector<float> > > sync_mrr_results;
@@ -130,6 +148,7 @@ void evaluate_foldout(int users_num,
         int *cur_rankings = rankings + uid*rank_len;
         sync_pre_results.emplace_back(pool.enqueue(precision, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
         sync_recall_results.emplace_back(pool.enqueue(recall, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
+        sync_hitrate_results.emplace_back(pool.enqueue(hitrate, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
         sync_ap_results.emplace_back(pool.enqueue(ap, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
         sync_ndcg_results.emplace_back(pool.enqueue(ndcg, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
         sync_mrr_results.emplace_back(pool.enqueue(mrr, cur_rankings, rank_len, ground_truths[uid], ground_truths_num[uid]));
@@ -137,11 +156,12 @@ void evaluate_foldout(int users_num,
     
     float *pre_offset = results + 0*rank_len;  // the offset address of precision in the first user result
     float *recall_offset = results + 1*rank_len;  // the offset address of recall in the first user result
-    float *ap_offset = results + 2*rank_len;  // the offset address of map in the first user result
-    float *ndcg_offset = results + 3*rank_len;  // the offset address of ndcg in the first user result
-    float *mrr_offset = results + 4*rank_len;  // the offset address of mrr in the first user result
+    float *hitrate_offset = results + 2*rank_len;  // the offset address of hitrate in the first user result
+    float *ap_offset = results + 3*rank_len;  // the offset address of map in the first user result
+    float *ndcg_offset = results + 4*rank_len;  // the offset address of ndcg in the first user result
+    float *mrr_offset = results + 5*rank_len;  // the offset address of mrr in the first user result
     
-    int metric_num = 5;
+    int metric_num = 6;
 
     for(auto && result: sync_pre_results)
     {
@@ -162,6 +182,17 @@ void evaluate_foldout(int users_num,
         }
         recall_offset += rank_len*metric_num;  // move to the next user's result address
     }
+    
+	for(auto && result: sync_hitrate_results)
+    {
+        auto tmp_result = result.get();
+        for(int k=0; k<rank_len; k++)
+        {
+            hitrate_offset[k] = tmp_result[k];
+        }
+        hitrate_offset += rank_len*metric_num;  // move to the next user's result address
+    }
+
 
     for(auto && result: sync_ap_results)
     {

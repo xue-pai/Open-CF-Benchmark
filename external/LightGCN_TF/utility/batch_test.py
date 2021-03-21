@@ -12,21 +12,23 @@ import multiprocessing
 import heapq
 import numpy as np
 cores = multiprocessing.cpu_count() // 2
-
+'''
 args = parse_args()
-
 f_path = args.data_path + args.dataset + '/' + args.dataset.lower() + '_x0'
-#data_generator = Data(path=args.data_path + args.dataset, batch_size=args.batch_size)
 data_generator = Data(path=f_path, batch_size=args.batch_size)
 USR_NUM, ITEM_NUM = data_generator.n_users, data_generator.n_items
 N_TRAIN, N_TEST = data_generator.n_train, data_generator.n_test
 
 BATCH_SIZE = args.batch_size
+'''
 
-
-def test(sess, model, users_to_test, drop_flag=False, train_set_flag=0):
+def test(sess, args, data_generator, model, users_to_test, drop_flag=False, train_set_flag=0):
     # B: batch size
     # N: the number of items
+    
+    BATCH_SIZE = args.batch_size
+    USR_NUM, ITEM_NUM = data_generator.n_users, data_generator.n_items
+    N_TRAIN, N_TEST = data_generator.n_train, data_generator.n_test
     top_show = np.sort(model.Ks)
     max_top = max(top_show)
     result = {'precision': np.zeros(len(model.Ks)), 'recall': np.zeros(len(model.Ks)), 'hitrate': np.zeros(len(model.Ks)), 'ndcg': np.zeros(len(model.Ks))}
