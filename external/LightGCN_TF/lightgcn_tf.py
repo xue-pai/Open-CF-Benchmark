@@ -1,8 +1,6 @@
 '''
-Created on Oct 10, 2018
-Tensorflow Implementation of Neural Graph Collaborative Filtering (NGCF) model in:
-Wang Xiang et al. Neural Graph Collaborative Filtering. In SIGIR 2019.
-@author: Xiang Wang (xiangwang@u.nus.edu)
+Tensorflow Implementation of LightGCN model in:
+[SIGIR'2020] Xiangnan He et al. LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation.
 version:
 Parallelized sampling on CPU
 C++ evaluation for top-k recommendation
@@ -18,11 +16,6 @@ from utility.helper import *
 from utility.batch_test import *
 
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-'''
-os.environ["CUDA_VISIBLE_DEVICES"] = '0' 
-gpu_options = tf.GPUOptions(allow_growth=True)
-sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
-'''
 cpus = [x.name for x in device_lib.list_local_devices() if x.device_type == 'CPU']
 
 class LightGCN(object):
