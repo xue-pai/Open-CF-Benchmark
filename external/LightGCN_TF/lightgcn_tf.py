@@ -8,7 +8,6 @@ C++ evaluation for top-k recommendation
 
 import sys
 import os
-sys.path.append("../../external/LightGCN_lib/")
 import threading
 import tensorflow as tf
 from tensorflow.python.client import device_lib

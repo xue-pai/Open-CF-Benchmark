@@ -34,13 +34,15 @@ We directly use the `gowalla` dataset provided in their [repo](https://github.co
 
 1. The benchmark is implemented based on the original LightGCN code released by the authors at： https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
 
-2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN/evaluator/cpp/include/evaluate_foldout.h`.
+2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN_TF/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN_TF/evaluator/cpp/include/evaluate_foldout.h`.
 
 3. Run the following script to reproduce the result.
 
    ```shell
    python LightGCN.py --dataset Gowalla --regs [1e-4] --embed_size 64 --layer_size [64,64,64,64] --lr 0.001 --batch_size 2048 --epoch 1000 --Ks [20,50] --gpu_id 1
    ```
+   
+   `Prompt:`  In our execution process, we use the python evaluator. If you want to use the C++ evaluator，you can read the README.md under the external/LightGCN_TF path.
 
 ###  Results
 
@@ -1126,3 +1128,4 @@ Epoch 1000: train==[0.01365=0.00586 + 0.00779 + 0.00000], recall=[0.41550, 0.680
 Epoch 1000 [1328.3s + 767.1s]: test==[0.12550=0.11775 + 0.00775 + 0.00000], recall=[0.18176, 0.28230], hitrate=[0.59163, 0.72885], precision=[0.05611, 0.03532], ndcg=[0.15463, 0.18584]
 Best Iter=[47]@[132063.9]      recall=[0.18202 0.28217], hitrate=[0.59237 0.72945], precision=[0.05609 0.03531], ndcg=[0.15474 0.18585]
 ```
+

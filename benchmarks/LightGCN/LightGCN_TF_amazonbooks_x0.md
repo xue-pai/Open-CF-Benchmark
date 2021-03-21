@@ -34,13 +34,15 @@ We directly use the `amazon-book` dataset provided in their [repo](https://githu
 
 1. The benchmark is implemented based on the original LightGCN code released by the authors at  https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
 
-2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN/evaluator/cpp/include/evaluate_foldout.h`.
+2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN_TF/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN_TF/evaluator/cpp/include/evaluate_foldout.h`.
 
 3. Run the following script to reproduce the result.
 
    ```shell
    python LightGCN.py --dataset AmazonBooks --regs [1e-4] --embed_size 64 --layer_size [64,64] --lr 0.001 --batch_size 8192 --epoch 1000 --Ks [20,50] --gpu_id 1
    ```
+   
+   `Prompt:`  In our execution process, we use the python evaluator. If you want to use the C++ evaluator，you can read the README.md under the external/LightGCN_TF path.
 
 ### Results
 
