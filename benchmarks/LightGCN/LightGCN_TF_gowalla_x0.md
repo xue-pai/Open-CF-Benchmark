@@ -5,8 +5,10 @@ A notebook to benchmark LightGCN on gowalla_x0 dataset.
 
 Author: Yi Li, Tsinghua University
 
+Edited by [XUEPAI Team](https://github.com/xue-pai)
+
 ### Index
-[Environments](#Environments) | [Dataset](#Dataset) | [Code](#Code) | [Scripts](#Scripts) | [Logs](#Logs) | [Results](#Results)
+[Environments](#Environments) | [Dataset](#Dataset) | [Code](#Code) | [Results](#Results)| [Logs](#Logs) 
 
 ### Environments
 * Hardware
@@ -17,12 +19,12 @@ GPU: GeForce RTX 2080Ti, 11G memory
 ```
 * Software
 ```python
-python == 3.6.2
-tensorflow == 1.12.0
-numpy == 1.13.3
-scipy == 0.19.1
-sklearn == 0.19.1
-cython == 0.26
+python: 3.6.2
+tensorflow: 1.12.0
+numpy: 1.13.3
+scipy: 0.19.1
+sklearn: 0.19.1
+cython: 0.26
 ```
 
 ### Dataset
@@ -30,17 +32,25 @@ We directly use the `gowalla` dataset provided in their [repo](https://github.co
 
 ### Code
 
-The benchmark is implemented based on the original LightGCN code released by the authors at [Github](https://github.com/kuandeng/LightGCN). We just added `hitrate()` function to calculate the hitrate in the `evaluator/python/evaluate_foldout.py` file, and added a line of code to get the result of the hitrate calculation in the `utility/batch_test.py file`.
+1. The benchmark is implemented based on the original LightGCN code released by the authors at： https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
 
-### Scripts
+2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN/evaluator/cpp/include/evaluate_foldout.h`.
 
+3. Run the following script to reproduce the result.
 
-```shell
-!python LightGCN.py --dataset Gowalla --regs [1e-4] --embed_size 64 --layer_size [64,64,64,64] --lr 0.001 --batch_size 2048 --epoch 1000 --Ks [20,50]
+   ```shell
+   python LightGCN.py --dataset Gowalla --regs [1e-4] --embed_size 64 --layer_size [64,64,64,64] --lr 0.001 --batch_size 2048 --epoch 1000 --Ks [20,50] --gpu_id 1
+   ```
+
+###  Results
+
+```
+HR@20 = 0.59237, Recall@20 = 0.18202, NDCG@20 = 0.15474
+HR@50 = 0.72945, Recall@50 = 0.28217, NDCG@50 = 0.18585
 ```
 
-
 ### Logs
+
 ```shell
 eval_score_matrix_foldout with python
 n_users=29858, n_items=40981
@@ -1114,11 +1124,5 @@ Epoch 998 [25.4s]: train==[0.01372=0.00593 + 0.00778]
 Epoch 999 [25.5s]: train==[0.01372=0.00593 + 0.00779]
 Epoch 1000: train==[0.01365=0.00586 + 0.00779 + 0.00000], recall=[0.41550, 0.68044], hitrate=[0.99822, 1.00000], precision=[0.33148, 0.24045], ndcg=[0.43072, 0.53335]
 Epoch 1000 [1328.3s + 767.1s]: test==[0.12550=0.11775 + 0.00775 + 0.00000], recall=[0.18176, 0.28230], hitrate=[0.59163, 0.72885], precision=[0.05611, 0.03532], ndcg=[0.15463, 0.18584]
-Best Iter=[47]@[132063.9]      recall=[0.18202 0.28217], hitrate=[0.59237 0.72945], precision=[0.05609 0.03531], ndcg=[0.15474 0.18585]
-```
-
-
-### Results
-```
 Best Iter=[47]@[132063.9]      recall=[0.18202 0.28217], hitrate=[0.59237 0.72945], precision=[0.05609 0.03531], ndcg=[0.15474 0.18585]
 ```
