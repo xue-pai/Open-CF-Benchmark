@@ -24,38 +24,12 @@ We use this dataset following the same data splitting and preprocessing as in Li
 
 :pushpin: Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for fair comparisons.
 
-<<<<<<< Updated upstream
 |  Publication |     Models      | Recall@20  | Recall@50 |  NDCG@20   | NDCG@50 | HitRate@20 | HitRate@50 |                      Steps-to-Reproduce                      | Contributed-by                                               |
 | -----------: | :-------------: | :--------: | :-------: | :--------: | :-----: | :--------: | :--------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-|              |     ItemPop     |   0.0051   |  0.0101   |   0.0044   | 0.0061  |   0.0419   |   0.0764   | [link](./ItemPop/ItemPop_amazonbooks_x0.md) | Kelong Mao                                                   |
 |     WWW'2001 |     ItemKNN     |   0.0736   |  0.1175   |   0.0606   | 0.0771  |   0.3765   |   0.5234   | [link](./ItemKNN/ItemKNN_amazonbooks_x0.md) | Jinpeng Wang                                                 |
 |     UAI'2009 |     MF-BPR      | ~~0.0250~~ |     /     | ~~0.0196~~ |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|              |  MF-BPR (ours)  |   0.0338   |  0.0660   |   0.0261   | 0.0380  |   0.2103   |   0.3530   |                             link                             | XUEPAI                                                       |
-|    ICDM'2011 |      SLIM       |   0.0755   |  0.1257   |   0.0602   | 0.0791  |   0.3873   |   0.5472   | [link]./SLIM/SLIM_amazonbooks_x0.md) | Kelong Mao                                                   |
-|    NIPS'2005 |      GRMF       |   0.0354   |     /     |   0.0270   |    /    |     /      |     /      |                              /                               | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
 |  RecSys'2016 |   YoutubeDNN    |   0.0502   |  0.0924   |   0.0388   | 0.0545  |   0.2757   |   0.4354   |                             link                             | XUEPAI                                                       |
-|     WWW'2017 |      NeuMF      |   0.0258   |     /     |   0.0200   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|     WWW'2017 |       CML       |   0.0522   |  0.0953   |   0.0428   | 0.0591  |   0.2840   |   0.4410   | [link](./CML/CML_amazonbooks_x0.md) | Jinpeng Wang                                                 |
-|   SIGIR'2018 |       CMN       |   0.0267   |     /     |   0.0218   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|    KDDW'2018 |      GC-MC      |   0.0288   |     /     |   0.0224   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|     KDD'2018 |     PinSage     |   0.0282   |     /     |   0.0219   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|  RecSys'2018 |     HOP-Rec     |   0.0309   |     /     |   0.0232   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|    ICLR'2018 |       GAT       |   0.0326   |     /     |   0.0235   |    /    |     /      |     /      |                              /                               | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
-|     WWW'2018 |     MultVAE     |   0.0407   |     /     |   0.0315   |    /    |     /      |     /      |                              /                               | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
-|    ICML'2019 |    DisenGCN     |   0.0329   |     /     |   0.0254   |    /    |     /      |     /      |                              /                               | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
-|   SIGIR'2019 |      NGCF       |   0.0344   |     /     |   0.0263   |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-| NeurIPS'2019 |    MacridVAE    |   0.0383   |     /     |   0.0295   |    /    |     /      |     /      |                              /                               | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
 |    ICDM'2019 |   Multi-GCCF    |   0.0363   |     /     |     /      |    /    |     /      |     /      |                              /                               | [Reported by Multi-GCCF  paper](https://arxiv.org/abs/2001.00267) |
-|     WWW'2019 |     EASE^R      |   0.0710   |  0.1177   |   0.0567   | 0.0744  |   0.3710   |   0.5293   | [link](./EASE_r/EASE_amazonbooks_x0.md) | XUEPAI                                                       |
-|    TOIS'2020 |      ENMF       |   0.0359   |  0.0691   |   0.0281   | 0.0404  |   0.2187   |   0.3649   | [link](./ENMF/ENMF_amazonbooks_x0.md) | Jinpeng Wang                                                 |
-|    AAAI'2020 |     LR-GCCF     |   0.0335   |           |   0.0265   |         |            |            |                             link                             | Yi Li                                                        |
-|   SIGIR'2020 |     NIA-GCN     |   0.0369   |     /     |   0.0287   |    /    |     /      |     /      |                              /                               | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
-|   SIGIR'2020 |    LightGCN     |   0.0411   |     /     |   0.0315   |    /    |     /      |     /      |                              /                               | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
-|              | LightGCN (ours) |   0.0411   |  0.0799   |   0.0318   | 0.0461  |   0.2423   |   0.4019   | [link](./LightGCN/LightGCN_TF_amazonbooks_x0.md) | Yi Li                                                        |
-|   SIGIR'2020 |      DGCF       |   0.0422   |     /     |   0.0324   |    /    |     /      |     /      |                              /                               | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
-|   Arxiv'2020 |    NGAT4Rec     |   0.0457   |     /     |   0.0358   |    /    |     /      |     /      |                              /                               | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
-|   Arxiv'2020 |     SGL-ED      |   0.0478   |     /     |   0.0379   |    /    |     /      |     /      |                              /                               | [Reported by SGL-ED paper](https://arxiv.org/pdf/2010.10783.pdf)` |
-=======
 |  Publication |     Models      | Recall@20  | Recall@50 |  NDCG@20   | NDCG@50 | HitRate@20 | HitRate@50 |                Steps-to-Reproduce                | Contributed-by                                               |
 | -----------: | :-------------: | :--------: | :-------: | :--------: | :-----: | :--------: | :--------: | :----------------------------------------------: | ------------------------------------------------------------ |
 |              |     ItemPop     |   0.0051   |  0.0101   |   0.0044   | 0.0061  |   0.0419   |   0.0764   |   [link](./ItemPop/ItemPop_amazonbooks_x0.md)    | Kelong Mao                                                   |
@@ -86,7 +60,6 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |   SIGIR'2020 |      DGCF       |   0.0422   |     /     |   0.0324   |    /    |     /      |     /      |                        /                         | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
 |   Arxiv'2020 |    NGAT4Rec     |   0.0457   |     /     |   0.0358   |    /    |     /      |     /      |                        /                         | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
 |   Arxiv'2020 |     SGL-ED      |   0.0478   |     /     |   0.0379   |    /    |     /      |     /      |                        /                         | [Reported by SGL-ED paper](https://arxiv.org/pdf/2010.10783.pdf) |
->>>>>>> Stashed changes
 
 
 ## Yelp18
