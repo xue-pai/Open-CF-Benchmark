@@ -24,12 +24,6 @@ We use this dataset following the same data splitting and preprocessing as in Li
 
 :pushpin: Note that we fix **embedding_dim=64** following the setting in NGCF/LightGCN for fair comparisons.
 
-|  Publication |     Models      | Recall@20  | Recall@50 |  NDCG@20   | NDCG@50 | HitRate@20 | HitRate@50 |                      Steps-to-Reproduce                      | Contributed-by                                               |
-| -----------: | :-------------: | :--------: | :-------: | :--------: | :-----: | :--------: | :--------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-|     WWW'2001 |     ItemKNN     |   0.0736   |  0.1175   |   0.0606   | 0.0771  |   0.3765   |   0.5234   | [link](./ItemKNN/ItemKNN_amazonbooks_x0.md) | Jinpeng Wang                                                 |
-|     UAI'2009 |     MF-BPR      | ~~0.0250~~ |     /     | ~~0.0196~~ |    /    |     /      |     /      |                              /                               | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
-|  RecSys'2016 |   YoutubeDNN    |   0.0502   |  0.0924   |   0.0388   | 0.0545  |   0.2757   |   0.4354   |                             link                             | XUEPAI                                                       |
-|    ICDM'2019 |   Multi-GCCF    |   0.0363   |     /     |     /      |    /    |     /      |     /      |                              /                               | [Reported by Multi-GCCF  paper](https://arxiv.org/abs/2001.00267) |
 |  Publication |     Models      | Recall@20  | Recall@50 |  NDCG@20   | NDCG@50 | HitRate@20 | HitRate@50 |                Steps-to-Reproduce                | Contributed-by                                               |
 | -----------: | :-------------: | :--------: | :-------: | :--------: | :-----: | :--------: | :--------: | :----------------------------------------------: | ------------------------------------------------------------ |
 |              |     ItemPop     |   0.0051   |  0.0101   |   0.0044   | 0.0061  |   0.0419   |   0.0764   |   [link](./ItemPop/ItemPop_amazonbooks_x0.md)    | Kelong Mao                                                   |
@@ -60,7 +54,6 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |   SIGIR'2020 |      DGCF       |   0.0422   |     /     |   0.0324   |    /    |     /      |     /      |                        /                         | [Reported by DGCF paper](https://arxiv.org/pdf/2007.01764)   |
 |   Arxiv'2020 |    NGAT4Rec     |   0.0457   |     /     |   0.0358   |    /    |     /      |     /      |                        /                         | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
 |   Arxiv'2020 |     SGL-ED      |   0.0478   |     /     |   0.0379   |    /    |     /      |     /      |                        /                         | [Reported by SGL-ED paper](https://arxiv.org/pdf/2010.10783.pdf) |
-
 
 ## Yelp18
 
