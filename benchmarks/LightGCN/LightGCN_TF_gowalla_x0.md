@@ -28,7 +28,7 @@ cython: 0.26
 ```
 
 ### Dataset
-We directly use the `gowalla` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the   data/***_x0 directory.
+We directly use the `gowalla` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/***_x0 directory.
 
 ### Code
 

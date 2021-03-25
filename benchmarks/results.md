@@ -104,4 +104,3 @@ We use this dataset following the same data splitting and preprocessing as in [N
 |        TOIS'2020 |              ENMF |    0.1523        |  0.2379        |  0.1315     |     0.1583     |     0.5336      |   0.6701    |   [link](./ENMF/ENMF_gowalla_x0.md)               |    Jinpeng Wang            |
 | SIGIR'2020 | LightGCN | 0.1830 | / | 0.1550 | / | / | / | / | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
 |  | LightGCN (ours) | 01820 | 0.2821 | 0.1547 | 0.1859 | 0.5924 | 0.7295 | [link](./LightGCN/LightGCN_TF_gowalla_x0.md) | Yi Li |
-
