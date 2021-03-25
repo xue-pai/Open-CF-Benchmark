@@ -1,7 +1,7 @@
 
 ## LightGCN_TF_yelp18_x0
 
-A notebook to benchmark LightGCN on yelp18 dataset.
+A notebook to benchmark LightGCN on yelp18_x0 dataset.
 
 Author: Yi Li, Tsinghua University
 
@@ -14,7 +14,7 @@ Edited by [XUEPAI Team](https://github.com/xue-pai)
 + Hardware
 
 ```python
-CPU: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+CPU: Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz
 RAM: 125G
 GPU: GeForce RTX 2080Ti, 11G memory
 ```
@@ -31,7 +31,7 @@ cython: 0.26
 ```
 
 ### Dataset
-We directly use the `yelp2018` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/***_x0 directory.
+We directly use the `yelp2018` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/Yelp18/yelp18_x0 directory.
 
 ### Code
 

@@ -18,10 +18,11 @@ class Bundler(nn.Module):
 
 
 class ItemEmb(Bundler):
-    def __init__(self, item_num=20000, factors=100, padding_idx=0):
+    def __init__(self, item_num=20000, factors=100, padding_idx=0, gpu_id=0):
         super(ItemEmb, self).__init__()
         self.item_num = item_num # item_num
         self.factors = factors
+        self.gpu_id = gpu_id
         self.ivectors = nn.Embedding(self.item_num, self.factors, padding_idx=padding_idx)
         self.ovectors = nn.Embedding(self.item_num, self.factors, padding_idx=padding_idx)
         self.ivectors.weight = nn.Parameter(torch.cat([torch.zeros(1, self.factors),
@@ -32,6 +33,7 @@ class ItemEmb(Bundler):
                                                        torch.FloatTensor(self.item_num - 1,
                                                                          self.factors).uniform_(-0.5 / self.factors,
                                                                                                 0.5 / self.factors)]))
+        
         self.ivectors.weight.requires_grad = True
         self.ovectors.weight.requires_grad = True
 
@@ -40,12 +42,12 @@ class ItemEmb(Bundler):
 
     def forward_i(self, data):
         v = torch.LongTensor(data)
-        v = v.cuda() if self.ivectors.weight.is_cuda else v
+        v = v.cuda(self.gpu_id) if self.ivectors.weight.is_cuda else v
         return self.ivectors(v)
 
     def forward_o(self, data):
         v = torch.LongTensor(data)
-        v = v.cuda() if self.ovectors.weight.is_cuda else v
+        v = v.cuda(self.gpu_id) if self.ovectors.weight.is_cuda else v
         return self.ovectors(v)
 
 
@@ -59,6 +61,7 @@ class Item2Vec(nn.Module):
                  padding_idx=0, 
                  weights=None, 
                  use_cuda=False, 
+                 gpu_id=0,
                  early_stop=True):
         """
         Item2Vec Recommender Class with SGNS
@@ -76,7 +79,7 @@ class Item2Vec(nn.Module):
         """
         super(Item2Vec, self).__init__()
         self.item2idx = item2idx
-        self.embedding = ItemEmb(item_num, factors, padding_idx)
+        self.embedding = ItemEmb(item_num, factors, padding_idx, gpu_id)
         self.item_num = item_num
         self.factors = factors
         self.epochs = epochs
@@ -88,6 +91,7 @@ class Item2Vec(nn.Module):
             self.weights = torch.FloatTensor(wf)
 
         self.use_cuda = use_cuda
+        self.gpu_id = gpu_id
         self.early_stop = early_stop
 
         self.user_vec_dict = {}
@@ -113,7 +117,7 @@ class Item2Vec(nn.Module):
     def fit(self, train_loader):
         item2idx = self.item2idx
         if self.use_cuda and torch.cuda.is_available():
-            self.cuda()
+            self.cuda(self.gpu_id)
         else:
             self.cpu()    
 
@@ -129,11 +133,9 @@ class Item2Vec(nn.Module):
 
                 if torch.isnan(loss):
                     raise ValueError(f'Loss=Nan or Infinity: current settings does not fit the recommender')
-
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
-
                 pbar.set_postfix(loss=loss.item())
                 current_loss += loss.item()
             
