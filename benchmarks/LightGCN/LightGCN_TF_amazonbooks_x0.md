@@ -13,7 +13,7 @@ Edited by [XUEPAI Team](https://github.com/xue-pai)
 ### Environments
 * Hardware
 ```shell
-CPU: Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz
+CPU: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
 RAM: 125G
 GPU: GeForce RTX 2080Ti, 11G memory
 ```
