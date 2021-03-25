@@ -1,4 +1,4 @@
-# Item2Vec_yelp_x0
+# Item2Vec_yelp18_x0
 
 A notebook to benchmark Item2Vec on yelp18 dataset.
 
