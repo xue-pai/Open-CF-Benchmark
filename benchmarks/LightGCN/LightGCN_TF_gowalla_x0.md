@@ -30,6 +30,7 @@ cython: 0.26
 ### Dataset
 We directly use the `gowalla` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/Gowalla/gowalla_x0 directory.
 
+
 ### Code
 
 1. The benchmark is implemented based on the original LightGCN code released by the authors at： https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
