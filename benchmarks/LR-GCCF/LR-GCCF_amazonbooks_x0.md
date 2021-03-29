@@ -23,7 +23,7 @@ GPU: GeForce RTX 2080Ti, 11G memory
 * Software
 
 ```python
-python: 3.5.6
+python: 3.6.2
 pytorch: 1.1.0
 torchvision: 0.3.0
 ```
