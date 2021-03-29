@@ -32,6 +32,7 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |              |  MF-BPR (ours)  |   0.0338   |  0.0660   |   0.0261   | 0.0380  |   0.2103   |   0.3530   |                       link                       | XUEPAI                                                       |
 |    ICDM'2011 |      SLIM       |   0.0755   |  0.1257   |   0.0602   | 0.0791  |   0.3873   |   0.5472   |      [link](./SLIM/SLIM_amazonbooks_x0.md)       | Kelong Mao                                                   |
 |    NIPS'2005 |      GRMF       |   0.0354   |     /     |   0.0270   |    /    |     /      |     /      |                        /                         | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
+|    MLSP'2016 |    Item2Vec     |   0.0326   |  0.0623   |   0.0252   | 0.0361  |   0.1897   |   0.3192   |  [link](./Item2Vec/Item2Vec_amazonbooks_x0.md)   | Yi Li                                                        |
 |  RecSys'2016 |   YoutubeDNN    |   0.0502   |  0.0924   |   0.0388   | 0.0545  |   0.2757   |   0.4354   |                       link                       | XUEPAI                                                       |
 |     WWW'2017 |      NeuMF      |   0.0258   |     /     |   0.0200   |    /    |     /      |     /      |                        /                         | [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
 |     WWW'2017 |       CML       |   0.0522   |  0.0953   |   0.0428   | 0.0591  |   0.2840   |   0.4410   |       [link](./CML/CML_amazonbooks_x0.md)        | Jinpeng Wang                                                 |
@@ -47,7 +48,7 @@ We use this dataset following the same data splitting and preprocessing as in Li
 |    ICDM'2019 |   Multi-GCCF    |   0.0363   |     /     |     /      |    /    |     /      |     /      |                        /                         | [Reported by Multi-GCCF  paper](https://arxiv.org/abs/2001.00267) |
 |     WWW'2019 |     EASE^R      |   0.0710   |  0.1177   |   0.0567   | 0.0744  |   0.3710   |   0.5293   |     [link](./EASE_r/EASE_amazonbooks_x0.md)      | XUEPAI                                                       |
 |    TOIS'2020 |      ENMF       |   0.0359   |  0.0691   |   0.0281   | 0.0404  |   0.2187   |   0.3649   |      [link](./ENMF/ENMF_amazonbooks_x0.md)       | Jinpeng Wang                                                 |
-|    AAAI'2020 |     LR-GCCF     |   0.0335   |           |   0.0265   |         |            |            |                       link                       | Yi Li                                                        |
+|    AAAI'2020 |     LR-GCCF     |   0.0335   |           |   0.0265   |         |   0.0349   |            |   [link](./LR-GCCF/LR-GCCF_amazonbooks_x0.md)    | Yi Li                                                        |
 |   SIGIR'2020 |     NIA-GCN     |   0.0369   |     /     |   0.0287   |    /    |     /      |     /      |                        /                         | [Reported by NAT4Rec paper](https://arxiv.org/abs/2010.12256) |
 |   SIGIR'2020 |    LightGCN     |   0.0411   |     /     |   0.0315   |    /    |     /      |     /      |                        /                         | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
 |              | LightGCN (ours) |   0.0411   |  0.0799   |   0.0318   | 0.0461  |   0.2423   |   0.4019   | [link](./LightGCN/LightGCN_TF_amazonbooks_x0.md) | Yi Li                                                        |
@@ -73,9 +74,11 @@ We use this dataset following the same data splitting and preprocessing as in Li
 | UAI'2009 |                    MF-BPR |      ~~0.0433~~         |      /         |   ~~0.0354~~          |      /        |         /         |      /           |       /     |     [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)            |
 | |                       MF-BPR (ours)               |    0.0576           |      0.1123         |     0.0468        |   0.0671          |      0.3624          |       0.5577         |      link      |       XUEPAI         |
 | ICDM'2011 |                        SLIM |    0.0646           |     0.1213          |    0.0541         |     0.0751        |    0.3912            |    0.5799            |     [link](./SLIM/SLIM_yelp18_x0.md)                 |     Kelong Mao              |
+| MLSP'2016 | Item2Vec | 0.0503 | 0.0971 | 0.0411 | 0.0585 | 0.3267 | 0.5114 | [link](./Item2Vec/Item2Vec_yelp18_x0.md) | Yi Li |
 | WWW'2017 |                         CML |     0.0622          |   0.1181            |   0.0536          |   0.0738          |      0.3810          |     0.5510           |     [link](./CML/CML_yelp18_x0.md)                |     Jinpeng Wang               |
 |    WWW'2019 |                     EASE^R |     0.0657          |    0.1225           |     0.0552        |   0.0762          |      0.3966          |    0.5839            |    [link](./EASE_r/EASE_yelp18_x0.md)                |    XUEPAI            |
 |     TOIS'2020 |                 ENMF |    0.0624          |  0.1189         |  0.0515       |     0.0723      |      0.3848         |    0.5792       |   [link](./ENMF/ENMF_yelp18_x0.md)               |    Jinpeng Wang            |
+| AAAI'2020 | LR-GCCF | 0.0558 |  | 0.0343 |  | 0.0561 |  | [link](./LR-GCCF/LR-GCCF_yelp18_x0.md) | Yi Li |
 | SIGIR'2020 | LightGCN | 0.0649 | / | 0.0530 | / | / | / | / | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
 |  | LightGCN (ours) | 0.0653 | 0.1254 | 0.0532 | 0.0756 | 0.3974 | 0.5922 | [link](./LightGCN/LightGCN_TF_yelp18_x0.md) | Yi Li |
 
@@ -99,8 +102,10 @@ We use this dataset following the same data splitting and preprocessing as in [N
 |    UAI'2009 |           MF-BPR |   ~~0.1291~~         |       -        |     ~~0.1109~~        |    -           |     -             |       -           |      -        |          [Reported by NGCF paper](https://arxiv.org/abs/1905.08108)   |
 |          |         MF-BPR (ours)                 |   0.1627            |    0.2533           |    0.1378         |   0.1662          |        0.5544        |    0.6936            |      link      |       XUEPAI         |
 |     ICDM'2011 |                   SLIM |    0.1699           |    0.2658           |    0.1382         |     0.1687        |       0.5564         |    0.6960            |   [link](./SLIM/SLIM_gowalla_x0.md)                  |     Kelong Mao            |
+| MLSP'2016 | Item2Vec | 0.1326 | 0.2158 | 0.1057 | 0.1320 | 0.4743 | 0.6188 | [link](./Item2Vec/Item2Vec_gowalla_x0.md) | Yi Li |
 |          WWW'2017 |               CML |   0.1670            |   0.2602            |   0.1292          |     0.1587        |      0.5410          |        0.6750        |   [link](./benchmarks/CML/CML_gowalla_x0.md)                  |     Jinpeng Wang              |
 |        WWW'2019 |            EASE^R |    0.1765           |    0.2701           |    0.1467         |     0.1760        |      0.5727          |      0.7081          |  [link](./EASE_r/EASE_gowalla_x0.md)                  |     XUEPAI           |
 |        TOIS'2020 |              ENMF |    0.1523        |  0.2379        |  0.1315     |     0.1583     |     0.5336      |   0.6701    |   [link](./ENMF/ENMF_gowalla_x0.md)               |    Jinpeng Wang            |
+| AAAI'2020 | LR-GCCF | 0.1519 |  | 0.1285 |  | 0.1555 |  | [link](./LR-GCCF/LR-GCCF_gowalla_x0.md) | Yi Li |
 | SIGIR'2020 | LightGCN | 0.1830 | / | 0.1550 | / | / | / | / | [Reported by LightGCN paper](https://arxiv.org/abs/2002.02126) |
 |  | LightGCN (ours) | 01820 | 0.2821 | 0.1547 | 0.1859 | 0.5924 | 0.7295 | [link](./LightGCN/LightGCN_TF_gowalla_x0.md) | Yi Li |
