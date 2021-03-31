@@ -25,12 +25,11 @@ GPU: GeForce RTX 2080Ti, 11G memory
 ```python
 python: 3.6.2
 pytorch: 1.1.0
-torchvision: 0.3.0
 ```
 
 ### Dataset
 
-We directly use the data format transformation file `LR-GCCF_data_process.py` provided by LR-GCCF to convert the data from the LightGCN repo into the format required by the program.
+We directly use the data format transformation file `data2npy.py`（Here, we rename this file to `LR-GCCF_data_process.py`.） provided by LR-GCCF to convert the data from the LightGCN repo into the format required by the program.
 
 You need to put the downloaded files `train.txt` and `test.txt` into the data/Yelp18/yelp18_x0 directory. 
 
