@@ -13,7 +13,7 @@ Edited by [XUEPAI Team](https://github.com/xue-pai)
 ### Environments
 * Hardware
 ```shell
-CPU: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+CPU: Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz
 RAM: 125G
 GPU: GeForce RTX 2080Ti, 11G memory
 ```
@@ -28,7 +28,9 @@ cython: 0.26
 ```
 
 ### Dataset
-We directly use the `amazon-book` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/***_x0 directory.
+We directly use the `amazon-book` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). 
+
+So you need to put the `train.txt` and `test.txt` downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data/amazon-book) into the data/AmazonBooks/amazonbooks_x0 directory.
 
 ### Code
 

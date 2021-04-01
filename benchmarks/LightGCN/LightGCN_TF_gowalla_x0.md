@@ -12,8 +12,8 @@ Edited by [XUEPAI Team](https://github.com/xue-pai)
 
 ### Environments
 * Hardware
-```shell
-CPU: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+```python
+CPU: Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz
 RAM: 125G
 GPU: GeForce RTX 2080Ti, 11G memory
 ```
@@ -28,18 +28,20 @@ cython: 0.26
 ```
 
 ### Dataset
-We directly use the `gowalla` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). So you can put the `train.txt` and `test.txt` in the corresponding data set downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data) into the data/Gowalla/gowalla_x0 directory.
+We directly use the `gowalla` dataset provided in their [repo](https://github.com/kuandeng/LightGCN/tree/master/Data). 
+
+So you need to put the `train.txt` and `test.txt` downloaded from the [LightGCN repo](https://github.com/kuandeng/LightGCN/tree/master/Data/gowalla) into the data/Gowalla/gowalla_x0 directory.
 
 
 ### Code
 
-1. The benchmark is implemented based on the original LightGCN code released by the authors at： https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
+1. The benchmark is implemented based on the original LightGCN code released by the authors at: https://github.com/kuandeng/LightGCN. We use the version with commit hash: b067ec0.
 
 2. We add `hitrate()` function to calculate the hitrate in both the `external/LightGCN_TF/evaluator/python/evaluate_foldout.py` file and the `external/LightGCN_TF/evaluator/cpp/include/evaluate_foldout.h`.
 
 3. Run the following script to reproduce the result.
 
-   ```shell
+   ```python
    python LightGCN.py --dataset Gowalla --regs [1e-4] --embed_size 64 --layer_size [64,64,64,64] --lr 0.001 --batch_size 2048 --epoch 1000 --Ks [20,50] --gpu_id 1
    ```
    
@@ -47,7 +49,7 @@ We directly use the `gowalla` dataset provided in their [repo](https://github.co
 
 ###  Results
 
-```
+```python
 HR@20 = 0.59237, Recall@20 = 0.18202, NDCG@20 = 0.15474
 HR@50 = 0.72945, Recall@50 = 0.28217, NDCG@50 = 0.18585
 ```
