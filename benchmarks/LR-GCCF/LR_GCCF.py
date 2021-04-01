@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../../external/LR_gccf/")
+sys.path.append("../../external/LR_GCCF/")
 import os
 
 from parser_my import parse_argus
